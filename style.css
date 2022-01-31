@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #013243;
+  --input-clr: #909090;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background-image: url("Assets/Background.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 45em;
+}
+
+.showcase-container {
+  background: var(--primary-clr);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 0 0 10px;
+  position: relative;
+}
+
+.showcase-container .background-img {
+  width: 100%;
+}
+
+.heading-para-container {
+  position: absolute;
+  top: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+.heading-para-container h1 {
+  color: #fff;
+}
+
+.heading-para-container p {
+  color: #86bfd3;
+}
+
+.login-box {
+  background: #fff;
+  padding: 2.7em 3.5em;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #cbcbcb;
+}
+
+.login-box h1 {
+  margin-bottom: 0.7em;
+}
+
+.details-form label {
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 0.4em;
+}
+
+.details-form input {
+  width: 100%;
+  padding: 1em 0.7em;
+  color: var(--input-clr);
+  border-radius: 4px;
+  border: none;
+  outline: 1px solid #cbcbcb;
+  margin-bottom: 1.3em;
+}
+
+.create-btn {
+  background-color: var(--primary-clr);
+  color: #fff;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 1em 0;
+}
+
+.confirm-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5em;
+}
+
+.confirm-box input {
+  margin-right: 0.6em;
+}
+
+.confirm-box .terms {
+  text-decoration: 3px underline;
+  text-underline-position: under;
+  color: var(--primary-clr);
+  font-weight: 700;
+  position: relative;
+}
+
+@media (max-width: 753px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    max-width: 25em;
+  }
+
+  .showcase-container {
+    border-radius: 0;
+  }
+
+  .login-box {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .login-box {
+    border-radius: 0;
+  }
+
+  .grid-container {
+    max-width: 100%;
+  }
+}
